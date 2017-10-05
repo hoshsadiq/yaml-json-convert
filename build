@@ -1,0 +1,27 @@
+#!/usr/bin/env sh
+
+set -e
+
+rm -rf bin
+
+export GOPATH=$(pwd)/vendor
+
+mkdir -p $GOPATH
+
+echo "Download Dependency"
+go get github.com/ghodss/yaml
+
+for arch in amd64; do
+    for OS in darwin linux; do
+        for app in json2yaml yaml2json; do
+            output="bin/$app-$OS-$arch"
+
+            echo "Compiling $app for $OS"
+            GOOS="$OS" GOARCH="$arch" go build -o "$output" "$app.go"
+            echo "Created $output"
+            echo ""
+        done
+    done
+done
+
+echo "Done"
