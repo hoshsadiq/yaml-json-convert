@@ -1,5 +1,16 @@
 #!/usr/bin/env sh
 
+echo "Build script need to be updated. In the mean time, use the Docker files:"
+
+echo "docker build -t yaml2json --file Dockerfile-yaml2json ."
+echo "docker build -t json2yaml --file Dockerfile-json2yaml ."
+
+echo "usage:"
+echo "cat examples/example.yaml| docker run -i --rm yaml2json"
+echo "cat examples/example.json| docker run -i --rm json2yaml"
+
+exit 1
+
 set -e
 
 rm -rf bin
