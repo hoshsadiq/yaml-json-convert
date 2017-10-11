@@ -1,22 +1,11 @@
-# yaml-json-convert
+# yaml2json
 
-A command line tool to easily convert YAML to JSON and visa versa
+A command line tool to easily convert YAML to JSON
 
 ### Usage
 
 ```
 $ yaml2json examples/example.yaml
-{"github":"https://github.com/hoshsadiq","user":"hosh"}
-
-$ json2yaml examples/example.json
-github: https://github.com/hoshsadiq
-user: hosh
-
-$ yaml2json examples/example.yaml | json2yaml
-github: https://github.com/hoshsadiq
-user: hosh
-
-$ json2yaml examples/example.json | yaml2json
 {"github":"https://github.com/hoshsadiq","user":"hosh"}
 ```
 
