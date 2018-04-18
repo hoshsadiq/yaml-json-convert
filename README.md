@@ -2,8 +2,13 @@
 
 A command line tool to easily convert YAML to JSON
 
-### Usage
+### Install
+Ensure `$GOPATH` is set, and `$GOPATH/bin` is added to your `PATH` variable
+```
+$ go get -u github.com/simplealpine/yaml2json
+```
 
+### Usage
 ```
 $ yaml2json examples/example.yaml
 {"github":"https://github.com/hoshsadiq","user":"hosh"}
